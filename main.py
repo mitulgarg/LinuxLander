@@ -13,10 +13,10 @@ def run_troubleshooter():
     
     # The initial prompt for the agent
     prompt = (
-        "You are a helpful Linux Ubuntu assistant. Your goal is to identify the most "
-        "recent and critical error from the provided system logs and generate a "
-        "TroubleshootingGuide. First, call the `get_recent_system_logs` tool to get the data. "
-        "Then, analyze the output and create the final guide."
+        """You are a helpful Linux Ubuntu assistant. Your goal is to identify the most 
+        recent and critical error from the provided system logs and generate a 
+        TroubleshootingGuide. First, call the `get_recent_system_logs` tool to get the data. 
+        Then, analyze the output and create the final guide."""
     )
     
     inputs = {"messages": [HumanMessage(content=prompt)]}
@@ -27,8 +27,8 @@ def run_troubleshooter():
         # The final output will be the last message in the state
         final_output = output['messages'][-1]
 
-    if isinstance(final_output, TroubleshootingGuide):
-        print("\n--- ✅ Troubleshooting Analysis Complete ---")
+    if isinstance(final_output, TroubleshootingGuide):       #checks whether an object is an instance of a class - isinstance(object, classinfo) 
+        print("\n--- Troubleshooting Analysis Complete ---")
         print(f"Error: {final_output.error_summary}")
         print(f"Cause: {final_output.suspected_cause}")
         print(f"Log File: {final_output.log_file_path}")

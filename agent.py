@@ -4,7 +4,11 @@ from typing import TypedDict, Annotated
 from langchain_core.messages import BaseMessage
 from langgraph.graph import StateGraph, END
 from langgraph.prebuilt import ToolExecutor
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
+# from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+
+
 
 # Import your custom modules
 from schemas import TroubleshootingGuide
@@ -14,9 +18,22 @@ from tools import get_recent_system_logs
 class AgentState(TypedDict):
     messages: Annotated[list, lambda x, y: x + y]
 
+
+load_dotenv()
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY") # Use .get for safer access
+
+
+
 # 2. Set up the LLM with the structured output schema
-# Make sure your GOOGLE_API_KEY is set in your environment
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest")
+llm = ChatOpenAI(
+    model="gpt-4o",
+    temperature=0.1,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+
+)
+
 structured_llm = llm.with_structured_output(TroubleshootingGuide)
 
 # 3. Create the tools and tool executor
