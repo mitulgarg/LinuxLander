@@ -3,14 +3,12 @@
 from typing import TypedDict, Annotated
 from langchain_core.messages import BaseMessage
 from langgraph.graph import StateGraph, END
-from langgraph.prebuilt import ToolExecutor
+from langgraph.prebuilt import ToolNode #replaced ToolExecutor with  ToolNode (newer langgraph version)
 from langchain_openai import ChatOpenAI
-# from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
+import os
 
-
-
-# Import your custom modules
+# Custom modules
 from schemas import TroubleshootingGuide
 from tools import get_recent_system_logs
 
@@ -38,7 +36,8 @@ structured_llm = llm.with_structured_output(TroubleshootingGuide)
 
 # 3. Create the tools and tool executor
 tools = [get_recent_system_logs]
-tool_executor = ToolExecutor(tools)
+
+# tool_executor = ToolExecutor(tools) (Not needed once we switched to ToolNode)
 
 # 4. Define the graph nodes
 def call_model(state):
@@ -49,13 +48,14 @@ def call_model(state):
     response = structured_llm.invoke(messages)
     return {"messages": [response]}
 
-def call_tool(state):
-    """The node that executes the log reading tool."""
-    last_message = state['messages'][-1]
-    # The LLM's last message should contain a tool call
-    tool_call = last_message.tool_calls[0]
-    action_result = tool_executor.invoke(tool_call)
-    return {"messages": [action_result]}
+#Not needed once we switched from ToolExecutor to ToolNode
+# def call_tool(state):
+#     """The node that executes the log reading tool."""
+#     last_message = state['messages'][-1]
+#     # The LLM's last message should contain a tool call
+#     tool_call = last_message.tool_calls[0]
+#     action_result = tool_executor.invoke(tool_call)
+#     return {"messages": [action_result]}
 
 # 5. Define the routing logic (conditional edges)
 def should_continue(state):
@@ -72,7 +72,7 @@ def should_continue(state):
 workflow = StateGraph(AgentState)
 
 workflow.add_node("agent", call_model)
-workflow.add_node("action", call_tool)
+workflow.add_node("action", ToolNode(tools))
 
 workflow.set_entry_point("agent")
 

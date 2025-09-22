@@ -21,7 +21,7 @@ def get_recent_system_logs(lines_per_file: int = 50) -> str:
     all_logs = ""
     for log_file in LOG_FILES_TO_CHECK:
         try:
-            # Using 'tail' command is efficient for getting the end of files.
+            # Using 'tail' is efficient for getting the end of files rather than loading the entire file into RAM when using f.read().
             # We add 'sudo' because these files often require root access.
             command = f"sudo tail -n {lines_per_file} {log_file}"
             
@@ -33,7 +33,7 @@ def get_recent_system_logs(lines_per_file: int = 50) -> str:
                 check=False # Set to False to not raise an error if tail fails (e.g., file not found)
             )
 
-            if result.returncode == 0:
+            if result.returncode == 0: # if subprocess ran with no errors
                 # Filter for relevant lines to keep the context for the LLM clean
                 filtered_lines = [
                     line for line in result.stdout.splitlines() 
@@ -43,6 +43,8 @@ def get_recent_system_logs(lines_per_file: int = 50) -> str:
                 if filtered_lines:
                     all_logs += f"\n--- Logs from {log_file} ---\n"
                     all_logs += "\n".join(filtered_lines)
+
+                print(result)
             
         except FileNotFoundError:
             # Silently ignore if a log file doesn't exist

@@ -43,7 +43,7 @@ def run_troubleshooter():
 
 
 # Define the hotkey combination (Super/Windows key + M)
-HOTKEY = {keyboard.Key.cmd, keyboard.KeyCode.from_char('m')}
+HOTKEY = {keyboard.Key.space, keyboard.KeyCode.from_char('m')}
 current_keys = set()
 
 def on_press(key):
