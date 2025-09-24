@@ -1,0 +1,26 @@
+[Unit]
+Description=Linux Troubleshooter Agent
+After=graphical.target
+
+[Service]
+User=admin
+Group=admin
+
+# Run in Ubuntu on Xorg session
+
+# Environment variable for pynput to find the display
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/run/user/1000/gdm/Xauthority"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus"
+
+# The full path to your project directory
+WorkingDirectory=/home/admin/Desktop/LinuxProject
+
+# The full path to the python executable in your venv
+ExecStart=/home/admin/Desktop/LinuxProject/venv/bin/python3 main.py
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=graphical.target
