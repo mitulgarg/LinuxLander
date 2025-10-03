@@ -8,7 +8,8 @@ import os
 
 # Custom modules
 from schemas import TroubleshootingGuide
-from tools import get_recent_system_logs
+from tools import get_contextual_logs, get_current_window_context
+
 
 # 1. Define the Agent's State
 class AgentState(TypedDict):
@@ -24,7 +25,7 @@ llm = ChatOpenAI(model="gpt-4o", temperature=0)
 structured_llm = llm.with_structured_output(TroubleshootingGuide)
 
 # 3. Create the tools
-tools = [get_recent_system_logs]
+tools = [get_contextual_logs, get_current_window_context]
 tool_node = ToolNode(tools)
 
 # 4. Define the graph nodes
