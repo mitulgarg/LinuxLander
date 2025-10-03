@@ -1,3 +1,6 @@
 .env
 /home/admin/Desktop/LinuxProject/__pycache__
 /home/admin/Desktop/LinuxProject/venv
+__pycache__
+venv
+

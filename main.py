@@ -1,42 +1,50 @@
-# main.py
-
 import subprocess
 from pynput import keyboard
 from langchain_core.messages import HumanMessage
+
+# Import our tools and agent components
 from agent import app
 from schemas import TroubleshootingGuide
+from tools import get_current_window_context # Import the new tool
 
 def show_notification(title, message):
     """Sends a desktop notification."""
     try:
-        # The 'urgency' can be 'low', 'normal', or 'critical'
         subprocess.run(['notify-send', title, message, '--urgency=critical'], check=True)
-    except FileNotFoundError:
-        print("notify-send command not found. Please install libnotify-bin.")
     except Exception as e:
         print(f"Failed to send notification: {e}")
 
 def run_troubleshooter():
-    """Function to be called by the hotkey."""
+    """Gets context, builds a prompt, and runs the agent."""
     print("\n\033[94mHotkey Activated! Running Linux Troubleshooter...\033[0m")
     
+    # STEP 1: Get the current application context
+    active_window = get_current_window_context.invoke({})
+    print(f"--- Context Captured: Active window is '{active_window}' ---")
+
+    # STEP 2: Build a dynamic prompt with the context
     prompt = (
-        """You are a helpful Linux Ubuntu assistant. Your goal is to identify the most 
-        recent and critical error from the provided system logs and generate a 
-        TroubleshootingGuide. First, call the `get_recent_system_logs` tool to get the data. 
-        Then, analyze the output and create the final guide. If no errors are found,
-        simply state that and do not create a guide."""
+        "You are a helpful Linux Ubuntu assistant. Your goal is to diagnose a "
+        "potential error based on the user's current context and system logs.\n\n"
+        f"The user was working in the following application when they triggered the alert: '{active_window}'.\n\n"
+        "First, call the `get_recent_system_logs` tool. If the application context is useful, "
+        "pass it to the tool to find specific logs. Then, analyze the logs to find the single most "
+        "recent and relevant error and generate a TroubleshootingGuide. If no errors are found, "
+        "simply state that."
     )
     
     inputs = {"messages": [HumanMessage(content=prompt)]}
     final_output = None
     
+    # STEP 3: Run the agent
     for output in app.stream(inputs, stream_mode="values"):
         final_output = output['messages'][-1]
 
+    # STEP 4: Show the result
     if isinstance(final_output, TroubleshootingGuide):
         title = f"💡 Error Found: {final_output.error_summary}"
         message = (
+            f"<b>Context:</b> {active_window}\n"
             f"<b>Cause:</b> {final_output.suspected_cause}\n"
             f"<b>Log File:</b> {final_output.log_file_path or 'journalctl'}\n"
             f"<b>Entry:</b> <code>{final_output.relevant_log_entry}</code>\n"
@@ -44,12 +52,10 @@ def run_troubleshooter():
         )
         show_notification(title, message)
     else:
-        # Handle the case where the LLM (correctly) finds no errors
-        # or another non-guide response is generated.
-        if isinstance(final_output.content, str):
-            show_notification("✅ System Scan Complete", final_output.content)
+        if hasattr(final_output, 'content') and isinstance(final_output.content, str):
+            show_notification("System Scan Complete", final_output.content)
         else:
-            show_notification("❌ Scan Error", "Could not generate a troubleshooting guide.")
+            show_notification("Scan Error", "Could not generate a troubleshooting guide.")
 
 
 # # Define the hotkey combination (Spacebar key + M)
