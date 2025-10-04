@@ -23,16 +23,9 @@ def run_troubleshooter():
     print(f"--- Context Captured: Active window is '{active_window}' ---")
 
     # STEP 2: Build a dynamic prompt with the context
-    prompt = (
-        "You are a helpful Linux Ubuntu assistant. Your goal is to diagnose a "
-        "potential error based on the user's current context and system logs.\n\n"
-        f"The user was working in the following application when they triggered the alert: '{active_window}'.\n\n"
-        "First, call the `get_recent_system_logs` tool. If the application context is useful, "
-        "pass it to the tool to find specific logs. Then, analyze the logs to find the single most "
-        "recent and relevant error and generate a TroubleshootingGuide. If no errors are found, "
-        "simply state that."
-    )
-    
+    prompt = f"The user was working in '{active_window}'. Diagnose issues from recent logs."
+
+
     inputs = {"messages": [HumanMessage(content=prompt)]}
     final_output = None
     
