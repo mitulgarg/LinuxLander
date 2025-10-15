@@ -1,0 +1,82 @@
+
+--- Fetched Logs for context 'main.py - LinuxProject - Visual Studio Code (process: code)' ---
+Sep 24 03:16:37 MitulUbuntu1 code.desktop[38480]: [main 2025-09-24T03:16:37.830Z] update#setState idle
+Sep 24 03:16:38 MitulUbuntu1 code.desktop[38520]: [38520:0924/031638.816802:ERROR:gles2_cmd_decoder_passthrough.cc(1094)] [GroupMarkerNotSet(crbug.com/242999)!:A0A02B0014000000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
+Sep 24 03:16:38 MitulUbuntu1 code.desktop[38520]: [38520:0924/031638.853864:ERROR:gl_utils.cc(431)] [.WebGL-0x4c020e8e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Sep 24 03:16:38 MitulUbuntu1 code.desktop[38520]: [38520:0924/031638.880261:ERROR:gl_utils.cc(431)] [.WebGL-0x4c020e8e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Sep 24 03:16:39 MitulUbuntu1 code.desktop[38520]: [38520:0924/031639.336216:ERROR:gl_utils.cc(431)] [.WebGL-0x4c020e8e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Sep 24 03:16:39 MitulUbuntu1 code.desktop[38520]: [38520:0924/031639.453911:ERROR:gl_utils.cc(431)] [.WebGL-0x4c020e8e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Sep 24 03:16:41 MitulUbuntu1 code.desktop[38480]: [38480:0924/031641.167578:ERROR:atom_cache.cc(231)] Add WM_CHANGE_STATE to kAtomsToCache
+Sep 24 03:17:07 MitulUbuntu1 code.desktop[38480]: [main 2025-09-24T03:17:07.831Z] update#setState checking for updates
+Sep 24 03:17:07 MitulUbuntu1 code.desktop[38480]: [main 2025-09-24T03:17:07.893Z] update#setState available for download
+Sep 24 03:38:49 MitulUbuntu1 code.desktop[38480]: [38480:0924/033849.325742:ERROR:atom_cache.cc(231)] Add chromium/x-internal-source-rfh-token to kAtomsToCache
+Sep 24 03:38:49 MitulUbuntu1 code.desktop[38480]: [38480:0924/033849.343347:ERROR:atom_cache.cc(231)] Add code/file-list to kAtomsToCache
+Sep 24 03:39:46 MitulUbuntu1 code.desktop[38480]: [38480:0924/033946.871696:ERROR:browser_main_loop.cc(276)] GLib-GObject: ../../../gobject/gsignal.c:2699: instance '0x1401739dd0' has no handler with id '2760'
+Sep 24 18:53:40 MitulUbuntu1 code.desktop[38480]: [main 2025-09-24T18:53:40.235Z] No ptyHost heartbeat after 6 seconds
+Oct 03 03:40:34 MitulUbuntu1 code.desktop[38480]: [38480:1003/034034.929408:ERROR:browser_main_loop.cc(276)] GLib-GObject: ../../../gobject/gsignal.c:2699: instance '0x140173c810' has no handler with id '4751'
+Oct 03 18:41:49 MitulUbuntu1 code.desktop[38480]: [main 2025-10-03T18:41:49.732Z] Extension host with pid 38587 exited with code: 0, signal: unknown.
+Oct 03 18:41:51 MitulUbuntu1 code.desktop[112531]: [main 2025-10-03T18:41:51.890Z] update#setState idle
+Oct 03 18:41:53 MitulUbuntu1 code.desktop[112576]: [112576:1003/184153.402310:ERROR:gles2_cmd_decoder_passthrough.cc(1094)] [GroupMarkerNotSet(crbug.com/242999)!:A0A02B003C000000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
+Oct 03 18:41:53 MitulUbuntu1 code.desktop[112576]: [112576:1003/184153.459218:ERROR:gl_utils.cc(431)] [.WebGL-0x2c02484700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 03 18:41:53 MitulUbuntu1 code.desktop[112576]: [112576:1003/184153.533639:ERROR:gl_utils.cc(431)] [.WebGL-0x2c02484700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 03 18:41:53 MitulUbuntu1 code.desktop[112576]: [112576:1003/184153.643703:ERROR:gl_utils.cc(431)] [.WebGL-0x2c02484700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 03 18:41:53 MitulUbuntu1 code.desktop[112576]: [112576:1003/184153.955774:ERROR:gl_utils.cc(431)] [.WebGL-0x2c02484700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Oct 03 18:42:21 MitulUbuntu1 code.desktop[112531]: [main 2025-10-03T18:42:21.892Z] update#setState checking for updates
+Oct 03 18:42:21 MitulUbuntu1 code.desktop[112531]: [main 2025-10-03T18:42:21.953Z] update#setState available for download
+-- Boot 431f29ee11364f89b33bd74968d861bd --
+Oct 04 03:43:28 MitulUbuntu1 code.desktop[3677]: [main 2025-10-04T03:43:28.765Z] update#setState idle
+Oct 04 03:43:28 MitulUbuntu1 code.desktop[3750]: [3750:1004/034328.923940:ERROR:command_buffer_proxy_impl.cc(125)] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+Oct 04 03:43:29 MitulUbuntu1 code.desktop[3718]: [3718:1004/034329.874429:ERROR:gles2_cmd_decoder_passthrough.cc(1094)] [GroupMarkerNotSet(crbug.com/242999)!:A0A02B001C000000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
+Oct 04 03:43:29 MitulUbuntu1 code.desktop[3718]: [3718:1004/034329.915157:ERROR:gl_utils.cc(431)] [.WebGL-0x2c020a7f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 04 03:43:30 MitulUbuntu1 code.desktop[3718]: [3718:1004/034330.000325:ERROR:gl_utils.cc(431)] [.WebGL-0x2c020a7f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 04 03:43:30 MitulUbuntu1 code.desktop[3718]: [3718:1004/034330.377275:ERROR:gl_utils.cc(431)] [.WebGL-0x2c020a7f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 04 03:43:30 MitulUbuntu1 code.desktop[3718]: [3718:1004/034330.435944:ERROR:gl_utils.cc(431)] [.WebGL-0x2c020a7f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Oct 04 03:44:06 MitulUbuntu1 code.desktop[3677]: [main 2025-10-04T03:44:06.921Z] update#setState checking for updates
+Oct 04 03:44:06 MitulUbuntu1 code.desktop[3677]: [main 2025-10-04T03:44:06.980Z] update#setState available for download
+Oct 04 04:14:18 MitulUbuntu1 code.desktop[3677]: [3677:1004/041418.437468:ERROR:atom_cache.cc(231)] Add chromium/x-internal-source-rfh-token to kAtomsToCache
+Oct 04 04:18:04 MitulUbuntu1 code.desktop[3677]: [3677:1004/041804.306508:ERROR:atom_cache.cc(231)] Add code/file-list to kAtomsToCache
+-- Boot 3a43207ad1a84f759d5a5a2a27e7a706 --
+Oct 04 15:31:17 MitulUbuntu1 code.desktop[3153]: [main 2025-10-04T15:31:17.475Z] update#setState idle
+Oct 04 15:31:17 MitulUbuntu1 code.desktop[3231]: [3231:1004/153117.633717:ERROR:command_buffer_proxy_impl.cc(125)] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+Oct 04 15:31:18 MitulUbuntu1 code.desktop[3194]: [3194:1004/153118.665791:ERROR:gles2_cmd_decoder_passthrough.cc(1094)] [GroupMarkerNotSet(crbug.com/242999)!:A0D02B0014000000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
+Oct 04 15:31:18 MitulUbuntu1 code.desktop[3194]: [3194:1004/153118.725563:ERROR:gl_utils.cc(431)] [.WebGL-0x240208d500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 04 15:31:18 MitulUbuntu1 code.desktop[3194]: [3194:1004/153118.800612:ERROR:gl_utils.cc(431)] [.WebGL-0x240208d500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 04 15:31:19 MitulUbuntu1 code.desktop[3194]: [3194:1004/153119.225655:ERROR:gl_utils.cc(431)] [.WebGL-0x240208d500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 04 15:31:19 MitulUbuntu1 code.desktop[3194]: [3194:1004/153119.423161:ERROR:gl_utils.cc(431)] [.WebGL-0x240208d500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Oct 04 15:31:47 MitulUbuntu1 code.desktop[3153]: [main 2025-10-04T15:31:47.479Z] update#setState checking for updates
+Oct 04 15:31:47 MitulUbuntu1 code.desktop[3153]: [main 2025-10-04T15:31:47.536Z] update#setState available for download
+Oct 04 15:33:33 MitulUbuntu1 code.desktop[3153]: [3153:1004/153333.500003:ERROR:atom_cache.cc(231)] Add WM_CHANGE_STATE to kAtomsToCache
+Oct 07 03:33:59 MitulUbuntu1 code.desktop[3153]: [3153:1007/033359.767063:ERROR:atom_cache.cc(231)] Add chromium/x-internal-source-rfh-token to kAtomsToCache
+Oct 07 16:44:04 MitulUbuntu1 code.desktop[3153]: [3153:1007/164404.977950:ERROR:atom_cache.cc(231)] Add code/file-list to kAtomsToCache
+Oct 07 17:39:24 MitulUbuntu1 code.desktop[3153]: [main 2025-10-07T17:39:24.733Z] Extension host with pid 3263 exited with code: 0, signal: unknown.
+Oct 07 17:39:24 MitulUbuntu1 code.desktop[3153]: [main 2025-10-07T17:39:24.847Z] [UtilityProcess id: 1, type: fileWatcher, pid: 3274]: crashed with code 15 and reason 'killed'
+Oct 07 17:39:26 MitulUbuntu1 code.desktop[8560]: [main 2025-10-07T17:39:26.822Z] update#setState idle
+Oct 07 17:39:28 MitulUbuntu1 code.desktop[8605]: [8605:1007/173928.247138:ERROR:gles2_cmd_decoder_passthrough.cc(1094)] [GroupMarkerNotSet(crbug.com/242999)!:A0A02B003C000000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
+Oct 07 17:39:28 MitulUbuntu1 code.desktop[8605]: [8605:1007/173928.279142:ERROR:gl_utils.cc(431)] [.WebGL-0x4c0368ff00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 07 17:39:28 MitulUbuntu1 code.desktop[8605]: [8605:1007/173928.324633:ERROR:gl_utils.cc(431)] [.WebGL-0x4c0368ff00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 07 17:39:28 MitulUbuntu1 code.desktop[8605]: [8605:1007/173928.548653:ERROR:gl_utils.cc(431)] [.WebGL-0x4c0368ff00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 07 17:39:28 MitulUbuntu1 code.desktop[8605]: [8605:1007/173928.705795:ERROR:gl_utils.cc(431)] [.WebGL-0x4c0368ff00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Oct 07 17:39:56 MitulUbuntu1 code.desktop[8560]: [main 2025-10-07T17:39:56.823Z] update#setState checking for updates
+Oct 07 17:39:56 MitulUbuntu1 code.desktop[8560]: [main 2025-10-07T17:39:56.882Z] update#setState available for download
+Oct 07 17:40:42 MitulUbuntu1 code.desktop[8560]: [8560:1007/174042.631338:ERROR:atom_cache.cc(231)] Add chromium/x-internal-source-rfh-token to kAtomsToCache
+Oct 07 17:41:01 MitulUbuntu1 code.desktop[8560]: [8560:1007/174101.984807:ERROR:atom_cache.cc(231)] Add code/file-list to kAtomsToCache
+-- Boot 96e14fb4b0b749a1874b3322ff17eba3 --
+Oct 08 16:55:49 MitulUbuntu1 code.desktop[3999]: [main 2025-10-08T16:55:49.977Z] update#setState idle
+Oct 08 16:55:50 MitulUbuntu1 code.desktop[4072]: [4072:1008/165550.151466:ERROR:command_buffer_proxy_impl.cc(125)] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+Oct 08 16:55:51 MitulUbuntu1 code.desktop[4040]: [4040:1008/165551.400940:ERROR:gles2_cmd_decoder_passthrough.cc(1094)] [GroupMarkerNotSet(crbug.com/242999)!:A0602B0044000000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
+Oct 08 16:55:51 MitulUbuntu1 code.desktop[4040]: [4040:1008/165551.490262:ERROR:gl_utils.cc(431)] [.WebGL-0x14033e6300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 08 16:55:51 MitulUbuntu1 code.desktop[4040]: [4040:1008/165551.572897:ERROR:gl_utils.cc(431)] [.WebGL-0x14033e6300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 08 16:55:51 MitulUbuntu1 code.desktop[4040]: [4040:1008/165551.807611:ERROR:gl_utils.cc(431)] [.WebGL-0x14033e6300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+Oct 08 16:55:52 MitulUbuntu1 code.desktop[4040]: [4040:1008/165552.009861:ERROR:gl_utils.cc(431)] [.WebGL-0x14033e6300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Oct 08 16:56:19 MitulUbuntu1 code.desktop[3999]: [main 2025-10-08T16:56:19.982Z] update#setState checking for updates
+Oct 08 16:56:20 MitulUbuntu1 code.desktop[3999]: [main 2025-10-08T16:56:20.040Z] update#setState available for download
+Oct 08 16:57:07 MitulUbuntu1 code.desktop[3999]: [3999:1008/165707.646434:ERROR:atom_cache.cc(231)] Add chromium/x-internal-source-rfh-token to kAtomsToCache
+Oct 08 17:15:08 MitulUbuntu1 code.desktop[3999]: [3999:1008/171508.901435:ERROR:atom_cache.cc(231)] Add code/file-list to kAtomsToCache
+Oct 08 18:15:59 MitulUbuntu1 code.desktop[4045]: [4045:1008/181559.676794:ERROR:ssl_client_socket_impl.cc(877)] handshake failed; returned -1, SSL error code 1, net_error -201
+Oct 08 18:15:59 MitulUbuntu1 code.desktop[4045]: [4045:1008/181559.677355:ERROR:ssl_client_socket_impl.cc(877)] handshake failed; returned -1, SSL error code 1, net_error -201
+Oct 08 18:21:00 MitulUbuntu1 code.desktop[4045]: [4045:1008/182100.312927:ERROR:ssl_client_socket_impl.cc(877)] handshake failed; returned -1, SSL error code 1, net_error -201
+Oct 08 18:21:00 MitulUbuntu1 code.desktop[4045]: [4045:1008/182100.341971:ERROR:ssl_client_socket_impl.cc(877)] handshake failed; returned -1, SSL error code 1, net_error -201
+Oct 08 18:26:00 MitulUbuntu1 code.desktop[4045]: [4045:1008/182600.737162:ERROR:ssl_client_socket_impl.cc(877)] handshake failed; returned -1, SSL error code 1, net_error -201
+Oct 08 18:26:01 MitulUbuntu1 code.desktop[4045]: [4045:1008/182601.023847:ERROR:ssl_client_socket_impl.cc(877)] handshake failed; returned -1, SSL error code 1, net_error -201
+Oct 08 18:26:03 MitulUbuntu1 code.desktop[4045]: [4045:1008/182603.143298:ERROR:ssl_client_socket_impl.cc(877)] handshake failed; returned -1, SSL error code 1, net_error -201
+Oct 08 18:26:03 MitulUbuntu1 code.desktop[4045]: [4045:1008/182603.368109:ERROR:ssl_client_socket_impl.cc(877)] handshake failed; returned -1, SSL error code 1, net_error -201

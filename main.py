@@ -27,6 +27,10 @@ def run_troubleshooter():
         "context": active_window
     }
 
+    with open("/home/admin/Desktop/LinuxProject/debug.log", "a") as f:
+        f.write(f"\n--- Starting Troubleshooter for context '{active_window}' ---\n")
+        f.write(f"Inputs: {inputs}\n")
+        
     final_output = None
     for output in app.stream(inputs, stream_mode="values"):
         final_output = output['messages'][-1]
